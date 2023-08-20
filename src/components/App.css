@@ -1,0 +1,56 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+@keyframes ossicilate{
+  25% {
+    transform: rotate(var(--ossicilate-min));
+  }
+  75% {
+    transform: rotate(var(--ossicilate-max));
+  }
+}
+
+@keyframes spin{
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.src {
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.rotate {
+  display: block;
+
+  transform-origin: var(--rotate-x-origin) var(--rotate-y-origin);
+
+  animation: var(--rotate-animation) infinite var(--rotate-frequency) linear;
+}
+
+.controls {
+  position: absolute;
+  bottom: 0;
+}
